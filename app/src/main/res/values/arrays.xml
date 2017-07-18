@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref1_entries">
+        <item>Display Most Popular Movies</item>
+        <item>Display Top Rated Movies</item>
+        <item>Display Favorites</item>
+    </string-array>
+    <string-array name="pref1_values">
+        <item>@string/pop_value</item>
+        <item>@string/topr_value</item>
+        <item>@string/fav_value</item>
+    </string-array>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--TODO: kill this and replace it with the box style-->
+    <PreferenceCategory
+        android:title = "@string/pref_group1_title"
+        android:key = "@string/pref_group1_key"
+        android:orderingFromXml="true">
+        <ListPreference
+            android:key="@string/sort_key"
+            android:id="@+id/typeOfSort"
+            android:title="@string/movie_sort_title"
+            android:summary="@string/pref1_summary"
+            android:entries="@array/pref1_entries"
+            android:entryValues="@array/pref1_values"
+            android:defaultValue="@string/pop_value"> <!--popular is default (it is popular movies,-->
+            <!--after all)-->
+        </ListPreference>
+    </PreferenceCategory>
+
+
+
+</PreferenceScreen>

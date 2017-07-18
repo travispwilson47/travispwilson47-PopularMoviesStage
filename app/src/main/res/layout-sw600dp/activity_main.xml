@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This is the two pane layout designed for tablets. This will contain both the image and also -->
+<!--the detail view. There still retains the menu for changing preferences-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:divider="@drawable/divider">
+    <!--This the the fragment for the main view, containing of all the photos-->
+    <fragment
+        android:id="@+id/fragment_main"
+        android:name="com.example.traviswilson.popularmoviesstagetwo.activities.MainFragment"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1">
+    </fragment>
+    <!--This is a frame because the detail view will be added by transaction, as it changes so-->
+    <!--frequently.-->
+    <FrameLayout
+        android:id="@+id/detail_fragment_container"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"></FrameLayout>
+</LinearLayout>

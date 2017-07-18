@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+
+    <ImageView
+        android:id="@+id/background_top"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/release_date"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/light_rectangle" />
+
+
+    <ImageView
+        android:id="@+id/background_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/very_light_rectangle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/background_top"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/selectionLeft"
+        android:layout_width="177dp"
+        android:layout_height="163dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:srcCompat="@drawable/selection_rectangle"
+        tools:layout_editor_absoluteY="302dp" />
+
+    <ImageView
+        android:id="@+id/selectionRight"
+        android:layout_width="200dp"
+        android:layout_height="166dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ReviewLabel"
+        app:srcCompat="@drawable/selection_rectangle"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteY="298dp"
+        tools:layout_editor_absoluteX="761dp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        android:textAppearance="@style/HeaderText"
+        android:textSize="70sp"
+        tools:text="Guardians of The Galaxy"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/release_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:textAppearance="@style/ReleaseText"
+        android:textSize="56sp"
+        tools:text="March 23, 2015"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:isIndicator="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="32dp"
+        android:numStars="5" />
+
+    <TextView
+        android:id="@+id/description_text"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="0dp"
+        android:gravity="center"
+        android:textAppearance="@style/HeaderText"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/selectionLeft"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/release_date"
+        tools:layout_editor_absoluteY="199dp"
+        tools:text="@string/nonsenseparagraph" />
+
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="73dp"
+        android:layout_height="71dp"
+        app:srcCompat="@drawable/play"
+        android:layout_marginLeft="59dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="17dp" />
+
+    <TextView
+        android:id="@+id/ReviewLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reviewLabel"
+        android:textAppearance="@style/HeaderText"
+        android:textSize="30sp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/selectionRight"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="@+id/selectionRight" />
+
+    <TextView
+        android:id="@+id/TrailerLabel"
+        android:layout_width="163dp"
+        android:layout_height="53dp"
+        android:text="@string/trailerLabel"
+        android:textAppearance="@style/HeaderText"
+        android:textSize="34sp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/description_text"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        app:layout_constraintTop_toTopOf="@+id/selectionLeft"
+        android:layout_marginTop="8dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_begin="20dp"
+        android:orientation="horizontal" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="93dp"
+        app:srcCompat="@drawable/check_review"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/selectionRight"
+        app:layout_constraintHorizontal_bias="0.757"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp" />
+    <ImageView
+        android:id="@+id/favorite_button"
+        android:layout_width="83dp"
+        android:layout_height="82dp"
+        app:srcCompat="@drawable/fav_button_unpressed"
+        android:layout_marginRight="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+
+</android.support.constraint.ConstraintLayout>

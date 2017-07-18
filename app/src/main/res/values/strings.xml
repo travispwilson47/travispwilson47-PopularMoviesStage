@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">PopularMoviesStageTwo</string>
+    <string name="content_provider_authority">com.example.traviswilson.popularmoviesstagetwo.provider</string>
+    <string name="sync_account_type">popularmoviesstagetwo.example.com</string>
+    <string name="content_authority">com.example.android.popularmoviesstagetwo.app</string>
+    <string name="pref_group1_title">Movies Sorting Preferences</string>
+    <string name="pref_group1_key">prefgroup1</string>
+    <string name="sort_key">sortByKey</string>
+    <string name="pref1_title">View Movies By</string>
+    <string name="pref1_summary">Change the movies displayed in Main activity</string>
+    <string name="fav_value">favorite</string>
+    <string name="topr_value">top rated</string>
+    <string name="pop_value">most popular</string>
+    <string name="menu_item1">Settings</string>
+    <string name="toggle_key">toggle menu</string>
+    <string name="toggle_summary">Enables or disables switching between Movie types in the menu bar</string>
+    <string name="movie_sort_title">View Movies By</string>
+    <string name="prefrence_file_key">\"com.example.android.popularmoviesstagetwo.app.preference_key</string>
+    <string name="is_data_existent">\"data_exist\"</string>
+    <string name="nonsenseparagraph">   Guardians of the Galaxy Vol. 2 is a 2017 American superhero film based on the Marvel Comics superhero team Guardians of the Galaxy, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures. It is the sequel to 2014\'s Guardians of the Galaxy and the fifteenth film in the Marvel Cinematic Universe.  </string>
+    <string name="reviewLabel">View Reviews</string>
+    <string name="trailerLabel">Play Trailer</string>
+    <string name="reviews_header_label">Reviews</string>
+    <string name="reviewActivityLabel">Reviews</string>
+    <string name="SettingsActivityLabel">Settings</string>
+    <string name="DetailActivityLabel">Details</string>
+</resources>

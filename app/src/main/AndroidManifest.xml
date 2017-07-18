@@ -1,0 +1,79 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.traviswilson.popularmoviesstagetwo">
+
+    <uses-permission
+        android:name="android.permission.INTERNET"/>
+    <uses-permission
+        android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission
+        android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission
+        android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--All the activities -->
+        <activity android:name=".activities.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.ReviewActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.traviswilson.popularmoviesstagetwo.activities.MainActivity">
+            </meta-data>
+        </activity>
+
+        <activity android:name=".settings.SettingsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.traviswilson.popularmoviesstagetwo.activities.MainActivity">
+            </meta-data>
+        </activity>
+        <activity android:name=".activities.DetailActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.traviswilson.popularmoviesstagetwo.activities.MainActivity">
+            </meta-data>
+        </activity>
+
+
+        <!--app content provider-->
+        <provider
+            android:authorities="@string/content_provider_authority"
+            android:name="com.example.traviswilson.popularmoviesstagetwo.data.MovieProvider"
+            android:exported="false"
+            android:syncable="true">
+        </provider>
+        <!--the syncAdpater service-->
+        <service android:name=".sync.MovieSyncService"
+            android:exported="true"
+            android:process=":sync">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter"
+            android:resource="@xml/syncadapter" />
+        </service>
+        <!--syncadapter dummy authentication -->
+        <service android:name=".sync.MovieAuthenticatorService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+            <meta-data
+            android:name="android.accounts.AccountAuthenticator"
+            android:resource="@xml/authenticator" />
+        </service>
+    </application>
+
+</manifest>
