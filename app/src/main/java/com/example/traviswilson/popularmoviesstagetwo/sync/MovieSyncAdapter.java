@@ -77,6 +77,7 @@ public class MovieSyncAdapter extends AbstractThreadedSyncAdapter {
     public void onPerformSync(Account account, Bundle extras, String authority, ContentProviderClient provider, SyncResult syncResult) {
         for (int i = 0; i < NUM_DISPLAY_TYPES; i++) { // Two stages first Popular then Top_rated
             String jsonString = null;
+            Log.v(LOG_TAG, "Begining Sync");
 
             final String BASE_URL = "http://api.themoviedb.org/3/movie/";
             final String API_KEY = BuildConfig.MOVIE_DB_API_KEY;
